@@ -1,0 +1,49 @@
+.conteiner {
+  background: url(/images/union.svg) no-repeat right/63%;
+  height: calc(100vh - 5rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+
+  .muralSubscribe {
+    color: var(--WHITE);
+    width: 50%;
+
+    p {
+      font-size: 1.5rem;
+      line-height: 2.125rem;
+
+      span {
+        font-weight: bold;
+        color: var(--BLUE);
+      }
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      font-weight: 900;
+      line-height: 4.5rem;
+      padding-right: 15%;
+
+      margin: 2.5rem 0 1.5rem;
+
+      span {
+        color: var(--BLUE);
+      }
+    }
+
+
+
+    button {
+      margin-top: 3.75rem
+    }
+  }
+
+  .muralImage {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+}

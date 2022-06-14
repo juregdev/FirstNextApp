@@ -1,0 +1,29 @@
+.singButton {
+  height: calc(100% - 2rem);
+  padding: 0 1.5rem;
+  background: var(--SHAPE);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  border: none;
+  border-radius: 100px;
+
+  color: var(--TEXT);
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
