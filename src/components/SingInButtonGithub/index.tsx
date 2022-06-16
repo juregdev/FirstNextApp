@@ -1,24 +1,36 @@
-import { useState } from 'react'
 import { FaGithub } from 'react-icons/fa'
+import { AiOutlineClose } from 'react-icons/ai'
+
+import { signIn, signOut, useSession } from 'next-auth/react'
 
 import styles from './styles.module.scss'
 
 export function SingInButtonGithub() {
 
-  const [isLogged, setIsLogged] = useState(true)
-  return isLogged ? (
-    <button className={styles.singButton}>
+  const { data: session } = useSession()
+
+  return session ? (
+    <button
+      className={styles.singButton}
+      onClick={() => signOut()}
+    >
 
       <FaGithub
         color='#04D361'
       />
-      FilipeBarrosg
-    </button>
-  ) : (<button className={styles.singButton}>
+      {session.user?.name}
 
-    <FaGithub
-      color='#EBA417'
-    />
-    Sing in with GitHub
-  </button>)
+      <AiOutlineClose />
+    </button>
+  ) : (
+    <button
+      className={styles.singButton}
+      type="button"
+      onClick={() => signIn('github')}
+    >
+      <FaGithub
+        color='#EBA417'
+      />
+      Sing in with GitHub
+    </button>)
 }
