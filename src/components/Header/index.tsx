@@ -15,8 +15,8 @@ export function Header() {
 
 
         <nav>
-          <a href="#" className={styles.selected}>Home</a>
-          <a href="#">Posts</a>
+          <a href={process.env.NEXTAUTH_URL} className={styles.selected}>Home</a>
+          <a href="/post">Posts</a>
         </nav>
       </div>
       <SingInButtonGithub />
